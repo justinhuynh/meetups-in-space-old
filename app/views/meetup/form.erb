@@ -1,0 +1,13 @@
+<h1><%= @title %></h1>
+
+<form action="/new_meetup" method="POST">
+  <label for="meetup[name]">Name of your meetup: </label>
+  <input type="text" name="meetup[name]" id="meetup[name]" required>
+
+  <label for="meetup[location]">Location: </label>
+  <input type="text" name="meetup[location]" id="meetup[location] required">
+
+  <label for="meetup[description]">Description: </label>
+  <input type="text" name="meetup[description]" id="meetup[description]" required>
+  <input type="submit">
+</form>

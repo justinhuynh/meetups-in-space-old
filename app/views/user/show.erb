@@ -1,0 +1,20 @@
+<h1><%= @title %></h1>
+
+<a href="/">Back to meetups</a>
+<a href="/users">Back to users</a>
+<a href="/meetup/new">Add a new meetup!</a>
+
+<h2><img src="<%= @user.avatar_url %>" height=60 width=60><%= @user.username %></h2>
+<div><%= @user.email %></div>
+
+<h3><%= @user.username %> is part of the following meetups:</h3>
+<table>
+  <th>Meetup Name</th>
+  <th>Meetup Location</th>
+  <% @user.meetups.each do |meetup| %>
+    <tr>
+      <td><a href="/meetups/<%= meetup.id %>"><%= meetup.name %></a></td>
+      <td><%= meetup.location %></td>
+    </tr>
+  <% end %>
+</table>
